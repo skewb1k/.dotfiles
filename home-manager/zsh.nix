@@ -2,18 +2,17 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    # enableAutosuggestions = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
     shellAliases =
       let
-        flakeDir = "~/nix";
+        flakeDir = "~/nix/.dotfiles";
       in {
       rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
       upd = "nix flake update ${flakeDir}";
       upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
-      scg = " sudo nix-collect-garbage -d";
+      scg = "sudo nix-collect-garbage -d";
 
 
       hms = "home-manager switch --flake ${flakeDir}";

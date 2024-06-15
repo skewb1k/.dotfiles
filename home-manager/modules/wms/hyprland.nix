@@ -6,11 +6,11 @@
     settings = {
       "$mainMod" = "SUPER";
       monitor=[
-        ",preferred,auto,1"
+        # ",preferred,auto,1"
         "DP-2,2560x1440@170,0x0,1,bitdepth,8"
         "HDMI-A-1,1920x1080@75,2560x-250,1,bitdepth,8,transform,3"
-        "eDP-1,1920x1080@60,auto,1,"
-        # "eDP-1,disable"
+        # "eDP-1,1920x1080@60,auto,1,"
+        "eDP-1,disable"
       ];
       
       env = [
@@ -116,7 +116,7 @@
 
       exec-once = [
         "swww init"
-        "swww img ~/nix/home-manager/modules/wms/wallpaper-night.jpg"
+        "swww img ~/nix/.dotfiles/home-manager/modules/wms/wallpaper-night.jpg"
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
@@ -129,7 +129,7 @@
         "$mainMod, E, exec, firefox-devedition"
         "$mainMod, A, exec, discord --disable-gpu"
         "$mainMod, W, exec, code --disable-gpu"
-        "$mainMod, H, exec, code /home/skewbik/nix/ --disable-gpu"
+        "$mainMod, H, exec, code /home/skewbik/nix/.dotfiles/ --disable-gpu"
         "$mainMod, C, killactive,"
         "$mainMod, M, exit,"
         "$mainMod, R, exec, rofi -show drun -show-icons -steal-focus"

@@ -129,7 +129,7 @@
         "$mainMod, E, exec, firefox-devedition"
         "$mainMod, A, exec, discord --disable-gpu"
         "$mainMod, W, exec, code --disable-gpu"
-        "$mainMod, H, exec, code /home/skewbik/nix/.dotfiles/ --disable-gpu"
+        "$mainMod, H, exec, code ~/nix/.dotfiles/ --disable-gpu"
         "$mainMod, C, killactive,"
         "$mainMod, M, exit,"
         "$mainMod, R, exec, rofi -show drun -show-icons -steal-focus"

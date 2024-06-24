@@ -11,11 +11,14 @@
     firefox-devedition
     libreoffice-qt
     dbeaver-bin
-
+    vim
+    
     # jetbrains.pycharm-community
     # vscodium
     postman
     vscode
+    nomacs
+    gimp
     
     # kdenlive
     discord
@@ -57,7 +60,6 @@
     gromit-mpx
 
 
-    # Other
     home-manager
   ];
 }

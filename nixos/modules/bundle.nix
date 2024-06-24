@@ -1,7 +1,4 @@
 {
-  nixpkgs.config = {
-    allowUnfree = true;
-  };
   imports = [
     ./auto-upgrade.nix
     ./display-manager.nix

@@ -29,10 +29,7 @@
     poweralertd
     playerctl
     psmisc
-    grim
-    slurp
-    imagemagick
-    swappy
+    hyprshot
     ffmpeg_6-full
     wl-screenrec
     wl-clipboard

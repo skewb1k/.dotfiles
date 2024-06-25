@@ -56,10 +56,11 @@
         rounding = 2;
 
         blur = {
-          enabled = false;
-          size = 16;
+          enabled = true;
+          size = 10;
           passes = 2;
           new_optimizations = true;
+          ignore_opacity = true;
         };
 
         drop_shadow = false;
@@ -67,6 +68,8 @@
         shadow_render_power = 3;
         "col.shadow" = "rgba(1a1a1aee)";
       };
+
+      windowrulev2 = "opacity 0.94 0.94,class:^(Spotify|Alacritty)$";
 
       animations = {
         enabled = true;
@@ -200,7 +203,14 @@
         ''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''
         ''$mainMod SHIFT, H, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/hyprland.nix"''
         ''$mainMod SHIFT, W, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/waybar.nix''
-        '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
+        # Screenshot a window
+        ''$mainMod, PRINT, exec, hyprshot -m window''
+        # Screenshot a monitor
+        '', PRINT, exec, hyprshot -m output''
+        # Screenshot a region
+        ''$mainMod SHIFT, PRINT, exec, hyprshot -m region''
+
+
 
         # Waybar
         "$mainMod, B, exec, pkill -SIGUSR1 waybar"

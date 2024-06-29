@@ -5,60 +5,45 @@
     telegram-desktop
     alacritty
     obs-studio
-    wofi
-    mpv
     discord
     firefox-devedition
     libreoffice-qt
-    dbeaver-bin
     vim
-    
+    # neovim
     # jetbrains.pycharm-community
     # vscodium
     postman
     vscode
     nomacs
-    gimp
-    
-    # kdenlive
+    # gimp
     discord
-    gparted
     obsidian
     libsForQt5.kolourpaint
     
     # CLI utils
-    # file
     tree
     wget
     git
+    gnumake
     fastfetch
     htop
-    # nix-index
+    nix-index
     unzip
-    scrot
-    ffmpeg
-    light
-    # lux
-    # mediainfo
-    # ranger
-    # zram-generator
+    # scrot
+    # ffmpeg
+    # light
+    lux
+    mediainfo
+    ranger
     cava
     zip
     ntfs3g
     yt-dlp
-    brightnessctl
     swww
     openssl
     lazygit
 
-
-    # GUI utils
-    feh
-    imv
-    dmenu
-    mako
-    gromit-mpx
-
+    # dmenu
 
     home-manager
   ];

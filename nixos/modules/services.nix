@@ -7,7 +7,7 @@
   ];
   
   # Enable Services
-  services.geoclue2.enable = true;
+  # services.geoclue2.enable = true;
   programs.direnv.enable = true;
   services.upower.enable = true;
   services.getty.autologinUser = "skewbik";
@@ -29,14 +29,13 @@
     poweralertd
     playerctl
     psmisc
-    hyprshot
     ffmpeg_6-full
     wl-screenrec
     wl-clipboard
     wl-clip-persist
     cliphist
     xdg-utils
-    wtype
+    # wtype
     wlrctl
     waybar
     rofi-wayland

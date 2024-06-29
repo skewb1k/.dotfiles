@@ -18,7 +18,8 @@
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
         "QT_QPA_PLATFORM,wayland"
-        "XDG_SCREENSHOTS_DIR,~/screens"
+        "XDG_SCREENSHOTS_DIR,/home/skewbik/Pictures"
+        "HYPRSHOT_DIR,/home/skewbik/Pictures"
       ];
 
       debug = {
@@ -132,6 +133,8 @@
         "$mainMod, E, exec, firefox-devedition"
         "$mainMod, A, exec, discord --disable-gpu"
         "$mainMod, W, exec, code --disable-gpu"
+        "$mainMod, P, exec, postman"
+        "$mainMod, T, exec, thunar"
         "$mainMod, H, exec, code ~/nix/.dotfiles/ --disable-gpu"
         "$mainMod, C, killactive,"
         "$mainMod, M, exit,"
@@ -206,9 +209,9 @@
         # Screenshot a window
         ''$mainMod, PRINT, exec, hyprshot -m window''
         # Screenshot a monitor
-        '', PRINT, exec, hyprshot -m output''
+        ''$mainMod SHIFT, PRINT, exec, hyprshot -m output''
         # Screenshot a region
-        ''$mainMod SHIFT, PRINT, exec, hyprshot -m region''
+        '', PRINT, exec, hyprshot -m region''
 
 
 

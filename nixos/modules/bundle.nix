@@ -1,9 +1,9 @@
 {
   imports = [
-    ./auto-upgrade.nix
+    # ./auto-upgrade.nix
     ./display-manager.nix
     ./dns.nix
-    ./firewall.nix
+    # ./firewall.nix
     ./fonts.nix
     ./gc.nix
     ./internationalisation.nix
@@ -14,7 +14,7 @@
     ./pr-langs.nix
     ./services.nix
     ./time.nix
-    ./undervolt.nix
+    # ./undervolt.nix
     # ./usb.nix
     ./bootloader.nix
     ./wayland.nix

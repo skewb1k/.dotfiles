@@ -11,6 +11,7 @@
     pyprland
     hyprpicker
     hyprlock
+    hyprshot
     hypridle
     # hyprcursor
     waybar

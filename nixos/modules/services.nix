@@ -17,6 +17,7 @@
   programs.thunar.enable = true;
   programs.zsh.enable = true;
   services.tumbler.enable = true; 
+  programs.light.enable = true;
   services.fwupd.enable = true;
   services.auto-cpufreq.enable = true;
   hardware.system76.enableAll = true;

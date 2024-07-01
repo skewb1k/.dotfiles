@@ -26,7 +26,7 @@
       se = "sudoedit";
       ff = "fastfetch";
 
-      sdn = "sudo shutdown 0";
+      sdn = "shutdown 0";
       srb = "sudo reboot";
     };
 

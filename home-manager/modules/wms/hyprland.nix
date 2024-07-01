@@ -6,11 +6,11 @@
     settings = {
       "$mainMod" = "SUPER";
       monitor=[
-        # ",preferred,auto,1"
-        "DP-2,2560x1440@170,0x0,1,bitdepth,8"
-        "HDMI-A-1,1920x1080@75,2560x-250,1,bitdepth,8,transform,3"
+        ",preferred,auto,1"
+        # "DP-2,2560x1440@170,0x0,1,bitdepth,8"
+        # "HDMI-A-1,1920x1080@75,2560x-250,1,bitdepth,8,transform,3"
         # "eDP-1,1920x1080@60,auto,1,"
-        "eDP-1,disable"
+        # "eDP-1,disable"
       ];
       
       env = [

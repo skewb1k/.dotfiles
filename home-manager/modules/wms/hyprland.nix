@@ -6,10 +6,10 @@
     settings = {
       "$mainMod" = "SUPER";
       monitor=[
-        ",preferred,auto,1"
+        # ",preferred,auto,2"
         # "DP-2,2560x1440@170,0x0,1,bitdepth,8"
         # "HDMI-A-1,1920x1080@75,2560x-250,1,bitdepth,8,transform,3"
-        # "eDP-1,1920x1080@60,auto,1,"
+        "eDP-1,3072x1920@120,auto,1.5,"
         # "eDP-1,disable"
       ];
       
@@ -116,7 +116,7 @@
 
       exec-once = [
         "swww init"
-        "swww img ~/nix/.dotfiles/home-manager/modules/wms/wallpaper-night.jpg"
+        "swww img ~/.dotfiles/home-manager/modules/wms/wallpaper-night.jpg"
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
@@ -127,11 +127,11 @@
         # "$mainMod, V, exec, cliphist list | rofi --dmenu | cliphist decode | wl-copy"
         "$mainMod, D, exec, alacritty"
         "$mainMod, E, exec, firefox-devedition"
-        "$mainMod, A, exec, discord --disable-gpu"
-        "$mainMod, W, exec, code --disable-gpu"
+        "$mainMod, A, exec, discord"
+        "$mainMod, W, exec, code"
         "$mainMod, P, exec, postman"
         "$mainMod, T, exec, thunar"
-        "$mainMod, H, exec, code ~/nix/.dotfiles/ --disable-gpu"
+        "$mainMod, H, exec, code ~/.dotfiles/"
         "$mainMod, C, killactive,"
         "$mainMod, M, exit,"
         "$mainMod, R, exec, rofi -show drun -show-icons -steal-focus"
@@ -194,8 +194,8 @@
         # ", XF86AudioMicMute, exec, pamixer --default-source -m"
         
         # Brightness control
-        # ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
-        # ", XF86MonBrightnessUp, exec, brightnessctl set +5% "
+        ", XF86MonBrightnessDown, exec, light -U 10"
+        ", XF86MonBrightnessUp, exec, light -A 10"
 
         # Configuration files
         ''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''

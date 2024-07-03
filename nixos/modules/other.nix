@@ -31,13 +31,13 @@
     unzip
     # scrot
     # ffmpeg
-    # light
     lux
     mediainfo
     ranger
     cava
     zip
     ntfs3g
+    argyllcms
     yt-dlp
     swww
     openssl

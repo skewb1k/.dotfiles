@@ -31,7 +31,7 @@
         kb_layout = "us,ru";
         kb_variant = "lang";
         kb_options = "grp:alt_shift_toggle";
-        force_no_accel = true;
+        force_no_accel = false;
         follow_mouse = 1;
 
         touchpad = {
@@ -41,6 +41,11 @@
 
         sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
       };
+      # device = {
+      #   name = cirq1080:00-0488:1054-touchpad;
+      #   sensitivity = "-0.5";
+      # };
+
 
       general = {
         gaps_in = 4;

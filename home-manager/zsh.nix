@@ -10,24 +10,25 @@
         flakeDir = "~/.dotfiles";
       in {
       rb = "sudo nixos-rebuild switch --flake ${flakeDir}";
-      upd = "nix flake update ${flakeDir}";
+      upd = "sudo nix flake update ${flakeDir}";
       upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
       scg = "sudo nix-collect-garbage -d";
-
-
       hms = "home-manager switch --flake ${flakeDir}";
 
-      conf = "nvim ${flakeDir}/nixos/configuration.nix";
-      pkgs = "nvim ${flakeDir}/nixos/packages.nix";
+      # conf = "nvim ${flakeDir}/nixos/configuration.nix";
+      # pkgs = "nvim ${flakeDir}/nixos/packages.nix";
 
       cdf = "cd ${flakeDir}";
       ll = "ls -l";
-      v = "nvim";
-      se = "sudoedit";
+      # v = "nvim";
+      # se = "sudoedit";
       ff = "fastfetch";
 
+      dcub = "docker compose up --build";
+      dcrm = "yes | docker compose rm; yes | docker volume prune";
+
       sdn = "shutdown 0";
-      srb = "sudo reboot";
+      srb = "reboot";
     };
 
     history.size = 10000;

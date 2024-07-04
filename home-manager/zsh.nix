@@ -20,6 +20,7 @@
 
       cdf = "cd ${flakeDir}";
       ll = "ls -l";
+      cl = "clear";
       # v = "nvim";
       # se = "sudoedit";
       ff = "fastfetch";

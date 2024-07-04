@@ -12,7 +12,7 @@
     # neovim
     # jetbrains.pycharm-community
     # vscodium
-    postman
+    # postman
     vscode
     nomacs
     # gimp

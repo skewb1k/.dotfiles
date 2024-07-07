@@ -8,11 +8,11 @@
       monitor=[
         # ",preferred,auto,2"
 
-        # "DP-2,2560x1440@170,0x0,1,bitdepth,8"
+        "DP-2,2560x1440@170,0x0,1,bitdepth,8"
         # "HDMI-A-1,1920x1080@75,2560x-250,1,bitdepth,8,transform,3"
-        # "eDP-1,disable"
+        "eDP-1,disable"
 
-        "eDP-1,3072x1920@120,auto,1.5,"
+        # "eDP-1,3072x1920@120,auto,1.5,"
       ];
       
       env = [

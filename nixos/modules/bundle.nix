@@ -10,7 +10,7 @@
     # ./linux-kernel.nix
     # ./nvidia.nix
     ./open-ssh.nix
-    ./opengl.nix
+    # ./opengl.nix
     ./pr-langs.nix
     ./services.nix
     ./time.nix

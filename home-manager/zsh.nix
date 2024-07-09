@@ -14,7 +14,7 @@
       upg = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
       scg = "sudo nix-collect-garbage -d";
       hms = "home-manager switch --flake ${flakeDir}";
-
+      hlr = "hyprctl reload";
       # conf = "nvim ${flakeDir}/nixos/configuration.nix";
       # pkgs = "nvim ${flakeDir}/nixos/packages.nix";
 

@@ -15,6 +15,7 @@
   services.dbus.enable = true;
   services.mpd.enable = true;
   programs.thunar.enable = true;
+  services.logind.lidSwitchExternalPower = "ignore";
   programs.zsh.enable = true;
   services.tumbler.enable = true; 
   services.colord.enable = true; 

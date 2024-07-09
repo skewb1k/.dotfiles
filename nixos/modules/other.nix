@@ -15,6 +15,8 @@
     # postman
     vscode
     nomacs
+    kalker
+    # arc-browser
     # gimp
     discord
     obsidian

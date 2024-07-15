@@ -75,6 +75,7 @@
     xdg-utils
     # wtype
     wlrctl
+    foot
     waybar
     rofi-wayland
     # dunst

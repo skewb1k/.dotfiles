@@ -18,7 +18,7 @@
     # ./usb.nix
     ./bootloader.nix
     ./wayland.nix
-    ./sound.nix
+    # ./sound.nix
     ./env.nix
     ./users.nix
     ./nm.nix

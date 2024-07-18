@@ -22,7 +22,8 @@
   programs.light.enable = true;
   services.fwupd.enable = true;
   services.auto-cpufreq = {
-    enable = true;
+    # enable = true;
+    enable = false;
     settings = {
       battery = {
         governor = "powersave";

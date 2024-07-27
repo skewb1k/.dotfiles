@@ -19,9 +19,9 @@
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
+        "XCURSOR_SIZE,36"
         "QT_QPA_PLATFORM,wayland"
-        "XDG_SCREENSHOTS_DIR,/home/skewbik/Pictures"
-        "HYPRSHOT_DIR,/home/skewbik/Pictures"
+        "XDG_SCREENSHOTS_DIR,~/screens"
       ];
 
       debug = {
@@ -43,11 +43,6 @@
 
         sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
       };
-      # device = {
-      #   name = cirq1080:00-0488:1054-touchpad;
-      #   sensitivity = "-0.5";
-      # };
-
 
       general = {
         gaps_in = 4;
@@ -61,23 +56,20 @@
       };
 
       decoration = {
-        rounding = 2;
+        rounding = 10;
 
         blur = {
           enabled = true;
-          size = 10;
+          size = 16;
           passes = 2;
           new_optimizations = true;
-          ignore_opacity = true;
         };
 
-        drop_shadow = false;
+        drop_shadow = true;
         shadow_range = 4;
         shadow_render_power = 3;
         "col.shadow" = "rgba(1a1a1aee)";
       };
-
-      windowrulev2 = "opacity 0.94 0.94,class:^(Spotify|Alacritty)$";
 
       animations = {
         enabled = true;
@@ -98,6 +90,10 @@
       dwindle = {
         pseudotile = true; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
         preserve_split = true; # you probably want this
+      };
+
+      master = {
+        new_is_master = true;
       };
 
       gestures = {
@@ -123,11 +119,11 @@
 
       exec-once = [
         "swww init"
-        "swww img ~/.dotfiles/home-manager/modules/wms/wallpaper-night.jpg"
+        "swww img ~/.dotfiles/home-manager/modules/wms/wallpaper-night.jpg &"
         "waybar"
-        "wl-paste --type text --watch cliphist store"
-        "wl-paste --type image --watch cliphist store"
-        "hypridle"
+        # "wl-paste --type text --watch cliphist store"
+        # "wl-paste --type image --watch cliphist store"
+        # "hypridle"
       ];
 
       bind = [
@@ -140,7 +136,7 @@
         "$mainMod, H, exec, code ~/.dotfiles/"
         "$mainMod, C, killactive,"
         "$mainMod, M, exit,"
-        "$mainMod, R, exec, rofi -show drun -show-icons -steal-focus"
+        "$mainMod, R, exec, wofi -show drun -show-icons -steal-focus"
         "$mainMod, J, togglesplit, # dwindle"
 
         # Move focus with mainMod + arrow keys
@@ -200,8 +196,8 @@
         # ", XF86AudioMicMute, exec, pamixer --default-source -m"
         
         # Brightness control
-        ", XF86MonBrightnessDown, exec, light -U 10"
-        ", XF86MonBrightnessUp, exec, light -A 10"
+        # ", XF86MonBrightnessDown, exec, light -U 10"
+        # ", XF86MonBrightnessUp, exec, light -A 10"
 
         # Configuration files
         ''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''
@@ -220,9 +216,6 @@
         # Waybar
         "$mainMod, B, exec, pkill -SIGUSR1 waybar"
         "$mainMod, W, exec, pkill -SIGUSR2 waybar"
-
-        # Disable all effects
-        "$mainMod Shift, G, exec, ~/.config/hypr/gamemode.sh "
       ];
 
       # Move/resize windows with mainMod + LMB/RMB and dragging

@@ -3,10 +3,6 @@
     ./hardware-configuration.nix
     ./modules/bundle.nix
   ];
-
-  disabledModules = [
-    # ./modules/xserver.nix
-  ];
   
   nixpkgs.config.allowUnfree = true;
 

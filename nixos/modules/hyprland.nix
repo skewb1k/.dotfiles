@@ -1,19 +1,33 @@
 { pkgs, ... }:
 
 {
-  # Enable Hyprland
-  programs.hyprland.enable = true;
+ programs.hyprland = {
+    enable = true;
+  };
+
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
 
   environment.systemPackages = with pkgs; [
-    xdg-desktop-portal-hyprland
-    pyprland
+    # --Utils and more--
+    wlr-randr
+    brightnessctl
+    # swaynotificationcenter
     hyprpicker
-    hyprlock
-    hyprshot
-    hypridle
-    # hyprcursor
+    pamixer
+    networkmanagerapplet
+    playerctl
+    wofi
+
+    # --Background--
+    swww
+
+    # --Screenshots--
+    grim
+    slurp
+
+    # --Overlays Bars and more--
     waybar
+    wlogout
+    nwg-drawer
   ];
 }

@@ -6,7 +6,7 @@
     # ./firewall.nix
     ./fonts.nix
     ./gc.nix
-    ./internationalisation.nix
+    # ./internationalisation.nix
     # ./linux-kernel.nix
     # ./nvidia.nix
     ./open-ssh.nix
@@ -18,8 +18,10 @@
     # ./usb.nix
     ./bootloader.nix
     ./wayland.nix
-    # ./sound.nix
+    ./sound.nix
     ./env.nix
+    ./security.nix
+    ./amdgpu.nix
     ./users.nix
     ./nm.nix
     ./hyprland.nix

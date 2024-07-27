@@ -5,9 +5,8 @@
     telegram-desktop
     alacritty
     obs-studio
-    discord
+    vencord
     firefox-devedition
-    libreoffice-qt
     vim
     # neovim
     # jetbrains.pycharm-community
@@ -20,7 +19,6 @@
     # gimp
     discord
     obsidian
-    libsForQt5.kolourpaint
     
     # CLI utils
     tree
@@ -33,7 +31,6 @@
     unzip
     # scrot
     # ffmpeg
-    lux
     mediainfo
     ranger
     cava
@@ -41,7 +38,6 @@
     ntfs3g
     argyllcms
     yt-dlp
-    swww
     openssl
     lazygit
 

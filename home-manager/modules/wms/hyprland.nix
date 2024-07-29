@@ -186,21 +186,18 @@
         "$mainMod, K, exec, brightnessctl set 5%- "
         "$mainMod, L, exec, brightnessctl set +5% "
 
-        # Volume and Media Control
-        # ", XF86AudioRaiseVolume, exec, pamixer -i 5 "
-        # ", XF86AudioLowerVolume, exec, pamixer -d 5 "
-        # ", XF86AudioMute, exec, pamixer -t"
-        # ", XF86AudioMicMute, exec, pamixer --default-source -m"
+        # Media Control
+        "$mainMod, P, exec, playerctl play-pause"
         
-        # Brightness control
-        # ", XF86MonBrightnessDown, exec, brightnessctl s 10%+"
-        # ", XF86MonBrightnessUp, exec, brightnessctl s 10%-"
-
-        '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
+         '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
 
         # Waybar
         "$mainMod, B, exec, pkill -SIGUSR1 waybar"
-        "$mainMod, W, exec, pkill -SIGUSR2 waybar"
+        "$mainMod, W, exec, pkill -SIGUSR2 waybar"  
+      ];
+      bindm = [
+        "$mainMod, mouse:272, movewindow"
+        "$mainMod, mouse:273, resizewindow"
       ];
     };
   };

@@ -14,7 +14,12 @@
   services.dbus.enable = true;
   # services.mpd.enable = true;
   programs.thunar.enable = true;
-  services.logind.lidSwitchExternalPower = "ignore";
+  services.logind.lidSwitchExternalPower = "suspend";
+  services.logind.extraConfig = ''
+    HandlePowerKey=suspend
+    IdleAction=suspend
+    IdleActionSec=15m
+  '';
   programs.zsh.enable = true;
   # services.tumbler.enable = true; 
   # services.colord.enable = true; 

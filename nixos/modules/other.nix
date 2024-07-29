@@ -17,6 +17,7 @@
     kalker
     # arc-browser
     # gimp
+    spotify
     discord
     obsidian
     

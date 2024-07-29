@@ -105,12 +105,12 @@
         disable_hyprland_logo = true;
       };
 
-      windowrule = [
-        "float, ^(imv)$"
-        "float, ^(mpv)$"
-      ];
-
       exec-once = [
+        "[workspace 1 silent] firefox-devedition"
+        "[workspace 2 silent] alacritty"
+        "[workspace 2 silent] spotify"
+        "[workspace 4 silent] telegram-desktop"
+        "[workspace 4 silent] discord"
         "swww init"
         "swww img ~/.dotfiles/home-manager/modules/wms/wallpaper-night.jpg &"
         "waybar"

@@ -6,8 +6,8 @@
     # ./firewall.nix
     ./fonts.nix
     ./gc.nix
-    # ./internationalisation.nix
-    # ./linux-kernel.nix
+    ./internationalisation.nix
+    ./linux-kernel.nix
     # ./nvidia.nix
     ./open-ssh.nix
     # ./opengl.nix
@@ -25,7 +25,7 @@
     ./users.nix
     ./nm.nix
     ./hyprland.nix
-    ./trim.nix
+    # ./trim.nix
     ./bluetooth.nix
     ./other.nix
   ];

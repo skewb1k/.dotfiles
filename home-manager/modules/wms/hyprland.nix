@@ -19,7 +19,7 @@
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
-        "XCURSOR_SIZE,36"
+        # "XCURSOR_SIZE,36"
         "QT_QPA_PLATFORM,wayland"
         "XDG_SCREENSHOTS_DIR,~/screens"
       ];
@@ -48,8 +48,8 @@
         gaps_in = 4;
         gaps_out = 8;
         border_size = 2;
-        "col.active_border" = "rgba(555555d9)";
-        "col.inactive_border" = "rgba(595959aa)";
+        "col.active_border" = "rgb(555555)";
+        "col.inactive_border" = "rgb(333333)";
 
         layout = "dwindle";
         allow_tearing = false;
@@ -65,10 +65,7 @@
           new_optimizations = true;
         };
 
-        drop_shadow = true;
-        shadow_range = 4;
-        shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
+        drop_shadow = false;
       };
 
       animations = {
@@ -90,10 +87,6 @@
       dwindle = {
         pseudotile = true; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
         preserve_split = true; # you probably want this
-      };
-
-      master = {
-        new_is_master = true;
       };
 
       gestures = {
@@ -133,10 +126,11 @@
         "$mainMod, A, exec, discord"
         "$mainMod, W, exec, code"
         "$mainMod, T, exec, thunar"
+        "$mainMod, G, exec, telegram-desktop"
         "$mainMod, H, exec, code ~/.dotfiles/"
         "$mainMod, C, killactive,"
         "$mainMod, M, exit,"
-        "$mainMod, R, exec, wofi -show drun -show-icons -steal-focus"
+        "$mainMod, R, exec, wofi -S drun"
         "$mainMod, J, togglesplit, # dwindle"
 
         # Move focus with mainMod + arrow keys
@@ -185,9 +179,12 @@
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
 
-        # Keyboard backlight
-        # "$mainMod, F3, exec, brightnessctl -d *::kbd_backlight set +33%"
-        # "$mainMod, F2, exec, brightnessctl -d *::kbd_backlight set 33%-"
+        # Brightness control
+        # ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
+        # ", XF86MonBrightnessUp, exec, brightnessctl set +5% "
+
+        "$mainMod, K, exec, brightnessctl set 5%- "
+        "$mainMod, L, exec, brightnessctl set +5% "
 
         # Volume and Media Control
         # ", XF86AudioRaiseVolume, exec, pamixer -i 5 "
@@ -196,32 +193,14 @@
         # ", XF86AudioMicMute, exec, pamixer --default-source -m"
         
         # Brightness control
-        # ", XF86MonBrightnessDown, exec, light -U 10"
-        # ", XF86MonBrightnessUp, exec, light -A 10"
+        # ", XF86MonBrightnessDown, exec, brightnessctl s 10%+"
+        # ", XF86MonBrightnessUp, exec, brightnessctl s 10%-"
 
-        # Configuration files
-        ''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''
-        ''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''
-        ''$mainMod SHIFT, H, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/hyprland.nix"''
-        ''$mainMod SHIFT, W, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/waybar.nix''
-        # Screenshot a window
-        ''$mainMod, PRINT, exec, hyprshot -m window''
-        # Screenshot a monitor
-        ''$mainMod SHIFT, PRINT, exec, hyprshot -m output''
-        # Screenshot a region
-        '', PRINT, exec, hyprshot -m region''
-
-
+        '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
 
         # Waybar
         "$mainMod, B, exec, pkill -SIGUSR1 waybar"
         "$mainMod, W, exec, pkill -SIGUSR2 waybar"
-      ];
-
-      # Move/resize windows with mainMod + LMB/RMB and dragging
-      bindm = [
-        "$mainMod, mouse:272, movewindow"
-        "$mainMod, mouse:273, resizewindow"
       ];
     };
   };

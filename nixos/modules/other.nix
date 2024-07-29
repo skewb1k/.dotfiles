@@ -14,7 +14,6 @@
     # postman
     vscode
     nomacs
-    zsh
     kalker
     # arc-browser
     # gimp

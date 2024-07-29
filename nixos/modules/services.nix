@@ -15,7 +15,7 @@
   # services.mpd.enable = true;
   programs.thunar.enable = true;
   services.logind.lidSwitchExternalPower = "ignore";
-  # programs.zsh.enable = true;
+  programs.zsh.enable = true;
   # services.tumbler.enable = true; 
   # services.colord.enable = true; 
   # services.fwupd.enable = true;

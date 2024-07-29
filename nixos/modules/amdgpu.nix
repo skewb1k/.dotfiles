@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 with lib;
 let
   cfg = config.modules.hardware.amdgpu;
@@ -9,7 +9,7 @@ in
   config = mkIf cfg.enable {
     boot.initrd.kernelModules = [ "amdgpu" ];
     boot.kernelModules = [ "kvm-amd" ];
-    services.xserver.videoDrivers = [ "amdgpu" ];
+    # services.xserver.videoDrivers = [ "amdgpu" ];
     hardware.opengl = {
       enable = true;
       driSupport = true;
@@ -17,7 +17,7 @@ in
       extraPackages = with pkgs; [
         amdvlk
       ];
-      package = pkgs-unstable.mesa.drivers;
+      package = pkgs.mesa.drivers;
     };
     hardware.enableRedistributableFirmware = true;
   };

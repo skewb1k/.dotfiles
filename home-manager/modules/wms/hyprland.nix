@@ -24,24 +24,24 @@
         "XDG_SCREENSHOTS_DIR,~/screens"
       ];
 
-      debug = {
-        disable_logs = false;
-        enable_stdout_logs = true;
-      };
+      # debug = {
+      #   disable_logs = false;
+      #   enable_stdout_logs = true;
+      # };
 
       input = {
         kb_layout = "us,ru";
         kb_variant = "lang";
         kb_options = "grp:alt_shift_toggle";
-        force_no_accel = false;
-        follow_mouse = 1;
+        # force_no_accel = false;
+        # follow_mouse = 1;
 
         touchpad = {
           natural_scroll = true;
           scroll_factor = 0.2;
         };
 
-        sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
+        # sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
       };
 
       general = {

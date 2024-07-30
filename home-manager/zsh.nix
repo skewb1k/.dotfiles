@@ -26,7 +26,7 @@
       ff = "fastfetch";
 
       dcub = "docker compose up --build";
-      dcrm = "yes | docker compose rm; yes | docker volume prune";
+      dcrm = "yes | docker compose rm; yes | docker system prune";
 
       sdn = "shutdown 0";
       srb = "reboot";

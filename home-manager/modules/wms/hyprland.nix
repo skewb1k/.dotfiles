@@ -48,8 +48,8 @@
         gaps_in = 4;
         gaps_out = 8;
         border_size = 2;
-        "col.active_border" = "rgb(555555)";
-        "col.inactive_border" = "rgb(333333)";
+        "col.active_border" = "rgb(4c505c)";
+        "col.inactive_border" = "rgb(383c4a)";
 
         layout = "dwindle";
         allow_tearing = false;

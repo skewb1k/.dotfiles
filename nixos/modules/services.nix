@@ -48,6 +48,8 @@
     # poweralertd
     # playerctl
     psmisc
+    wineWowPackages.waylandFull
+    appimage-run
     # ffmpeg_6-full
     # wl-screenrec
     # wl-clipboard

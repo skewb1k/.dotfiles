@@ -110,7 +110,6 @@
         "[workspace 2 silent] alacritty"
         "[workspace 2 silent] spotify"
         "[workspace 4 silent] telegram-desktop"
-        "[workspace 4 silent] discord"
         "swww init"
         "swww img ~/.dotfiles/home-manager/modules/wms/wallpaper-night.jpg &"
         "waybar"

@@ -12,6 +12,7 @@
     # jetbrains.pycharm-community
     # vscodium
     # postman
+    newman
     vscode
     nomacs
     kalker

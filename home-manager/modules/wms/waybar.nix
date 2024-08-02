@@ -55,11 +55,11 @@
             warning = 30;
             critical = 15;
         };
-        format = "{capacity}% {icon}";
-        format-charging = "{capacity}% ";
-        format-plugged = "{capacity}% ";
-        format-alt = "{time} {icon}";
-        format-icons = ["" "" "" "" "" "" "" "" "" ""];
+        format = "{capacity}%";
+        format-charging = "{capacity}%";
+        format-plugged = "{capacity}%";
+        format-alt = "{time}";
+        # format-icons = ["" "" "" "" "" "" "" "" "" ""];
 	# on-update = "$HOME/.config/waybar/scripts/check_battery.sh";
     };
 

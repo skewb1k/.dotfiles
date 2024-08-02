@@ -22,6 +22,8 @@
         # "XCURSOR_SIZE,36"
         "QT_QPA_PLATFORM,wayland"
         "XDG_SCREENSHOTS_DIR,~/screens"
+        "QT_QPA_PLATFORMTHEME,qt6ct"
+        "GTK_THEME, Adwaita-dark"
       ];
 
       # debug = {
@@ -113,6 +115,7 @@
         "swww init"
         "swww img ~/.dotfiles/home-manager/modules/wms/wallpaper-night.jpg &"
         "waybar"
+        "gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
         # "wl-paste --type text --watch cliphist store"
         # "wl-paste --type image --watch cliphist store"
         # "hypridle"

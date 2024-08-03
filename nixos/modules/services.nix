@@ -26,12 +26,12 @@
   # services.colord.enable = true; 
   # services.fwupd.enable = true;
   services.auto-cpufreq = {
-    # enable = true;
-    enable = false;
+    enable = true;
+    # enable = false;
     settings = {
       battery = {
-        governor = "powersave";
-        turbo = "never";
+        governor = "performance";
+        turbo = "auto";
       };
       charger = {
         governor = "performance";

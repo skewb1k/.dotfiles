@@ -30,8 +30,8 @@
     # enable = false;
     settings = {
       battery = {
-        governor = "performance";
-        turbo = "auto";
+        governor = "powersave";
+        turbo = "never";
       };
       charger = {
         governor = "performance";

@@ -182,8 +182,8 @@
         # ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
         # ", XF86MonBrightnessUp, exec, brightnessctl set +5% "
 
-        "$mainMod, K, exec, brightnessctl set 10%- "
-        "$mainMod, L, exec, brightnessctl set +10% "
+        "$mainMod, K, exec, brightnessctl set 5%- "
+        "$mainMod, L, exec, brightnessctl set +5% "
 
         # Media Control
         "$mainMod, P, exec, playerctl play-pause"

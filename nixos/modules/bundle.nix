@@ -7,7 +7,6 @@
     ./fonts.nix
     ./gc.nix
     ./internationalisation.nix
-    ./linux-kernel.nix
     # ./nvidia.nix
     ./open-ssh.nix
     # ./opengl.nix

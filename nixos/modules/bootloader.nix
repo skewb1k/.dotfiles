@@ -1,20 +1,34 @@
 { pkgs,  ... }:
 
 {
-  # Bootloader.
-  boot.loader.systemd-boot.enable = false;
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "nodev";
-  boot.loader.grub.useOSProber = true;
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.configurationLimit = 10;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot";
   # boot.loader.grub.extraConfig=''
   #     GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=LVDS-1:d"
   # '';
-  boot.loader.timeout = 4;
-  # boot.initrd.enable = true;
-  # boot.initrd.systemd.enable = true;
-  boot.consoleLogLevel = 3;
+  boot = {
+    loader = {
+      grub = {
+        enable = true;
+        device = "nodev";
+        useOSProber = true;
+        efiSupport = true;
+        configurationLimit = 10;
+      };
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot";
+      };
+      # systemd-boot.enable = true;
+      timeout = 3;
+    };
+    initrd = {
+      enable = true;
+      systemd.enable = true;
+      availableKernelModules = ["nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod"];
+    };
+    kernelModules = [ "acpi_call" ];
+		kernelPackages = pkgs.linuxPackages;
+		extraModulePackages = with pkgs.linuxPackages; [
+			acpi_call
+		];
+  };
 }

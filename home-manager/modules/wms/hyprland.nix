@@ -122,15 +122,13 @@
         # "$mainMod, V, exec, cliphist list | rofi --dmenu | cliphist decode | wl-copy"
         "$mainMod, D, exec, alacritty"
         "$mainMod, E, exec, firefox-devedition"
-        "$mainMod, A, exec, discord"
         "$mainMod, W, exec, code"
         "$mainMod, T, exec, thunar"
-        "$mainMod, G, exec, telegram-desktop"
         "$mainMod, H, exec, code ~/.dotfiles/"
         "$mainMod, C, killactive,"
-        "$mainMod, M, exit,"
+        # "$mainMod, M, exit,"
         "$mainMod, R, exec, wofi -S drun"
-        "$mainMod, J, togglesplit, # dwindle"
+        "$mainMod, S, togglesplit, # dwindle"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left,  movefocus, l"
@@ -182,17 +180,22 @@
         # ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
         # ", XF86MonBrightnessUp, exec, brightnessctl set +5% "
 
-        "$mainMod, K, exec, brightnessctl set 5%- "
-        "$mainMod, L, exec, brightnessctl set +5% "
+        "$mainMod, J, exec, brightnessctl set 5%- "
+        "$mainMod, K, exec, brightnessctl set +5% "
 
         # Media Control
-        "$mainMod, P, exec, playerctl play-pause"
+        "$mainMod, P, exec, playerctl -p spotify play-pause"
+        "$mainMod, minus, exec, playerctl -p spotify volume 0.05-"
+        "$mainMod, equal, exec, playerctl -p spotify volume 0.05+"
+        "$mainMod, bracketright, exec, playerctl -p spotify next"
+        "$mainMod, bracketleft, exec, playerctl -p spotify previous"
         
+        # Screenshot
          '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
 
         # Waybar
-        "$mainMod, B, exec, pkill -SIGUSR1 waybar"
-        "$mainMod, W, exec, pkill -SIGUSR2 waybar"  
+        # "$mainMod, B, exec, pkill -SIGUSR1 waybar"
+        # "$mainMod, W, exec, pkill -SIGUSR2 waybar"  
       ];
       bindm = [
         "$mainMod, mouse:272, movewindow"

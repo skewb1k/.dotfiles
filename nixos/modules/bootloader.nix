@@ -1,9 +1,6 @@
 { pkgs,  ... }:
 
 {
-  # boot.loader.grub.extraConfig=''
-  #     GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=LVDS-1:d"
-  # '';
   boot = {
     loader = {
       grub = {
@@ -12,6 +9,9 @@
         useOSProber = true;
         efiSupport = true;
         configurationLimit = 10;
+        extraConfig=''
+          GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+        '';
       };
       efi = {
         canTouchEfiVariables = true;
@@ -26,6 +26,8 @@
       availableKernelModules = ["nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod"];
     };
     kernelModules = [ "acpi_call" ];
+    kernelParams = [ "quiet" "pcie_aspm=force" ];
+    consoleLogLevel = 0;
 		kernelPackages = pkgs.linuxPackages;
 		extraModulePackages = with pkgs.linuxPackages; [
 			acpi_call
